@@ -83,7 +83,8 @@ System.out.println(a);
 
 **switch用法**
 
-- 
+- 用法一
+
   ```java
   switch (表达式) {
       case 字面量,字面量:
@@ -94,7 +95,8 @@ System.out.println(a);
           break;
   }
   ```
-- 
+- 用法二
+
   ```java
   switch (表达式) {
       case 字面量,字面量 -> {
@@ -110,7 +112,6 @@ System.out.println(a);
 
 ```java
 import java.util.Random;
-
 
 Random r = new Random();
 int a = r.nextInt(10); // 0 ~ 9
@@ -163,12 +164,12 @@ int a = r.nextInt(10); // 0 ~ 9
 
 ```java
 public class GirlFriend {
-    private int aget;
+  private int aget;
     public void method() {
-        int age = 10;
-        System.out.println(age); // 就近原则 所以是10
-        System.out.println(this.age) // 0
-    }
+      int age = 10;
+      System.out.println(age); // 就近原则 所以是10
+      System.out.println(this.age) // 0
+    }
 }
 ```
 
@@ -222,7 +223,7 @@ String s = sb.toString(); // 转换为String
 StringJoiner sj = new StringJoiner(", ", "[", "]");
 int[] arr = {1, 2, 3};
 for (int i = 0; i < arr.length; i ++ )
-    sj.add(arr[i] + "");
+    sj.add(arr[i] + "");
 System.out.println(sj.toString()); // [1, 2, 3]
 ```
 
@@ -375,6 +376,7 @@ public insterface Swim {
       public Inner1 getInstance() {
           return new Inner1();
       }
+  }
   Outer.Inner oi = new Outer().new Inner(); // 获取成员内部类
   Outer o = new Outer();
   o.getInstance(); // 使用外部类方法来返回内部类对象
